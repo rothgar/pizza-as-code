@@ -11,8 +11,7 @@ nodes:
   - role: control-plane
     image: kindest/node:v1.21.14
   - role: worker
-    image: kindest/node:v1.21.14'
-> kind.yaml
+    image: kindest/node:v1.21.14' > kind.yaml
 
 kind create cluster --config kind.yaml
 
