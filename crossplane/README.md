@@ -26,7 +26,8 @@ helm install crossplane \
 Clone the repository and install the provider-pizza:
 
 ```sh
-git clone git@github.com:grantgumina/provider-pizza.github
+git clone git@github.com:grantgumina/provider-pizza.git
+cd provider-pizza
 make run
 ```
 
