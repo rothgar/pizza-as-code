@@ -33,14 +33,11 @@ make run
 This will install the CRDs into the cluster and run the controller locally.
 You should see log output in your console.
 
-```sh
 Create a provider config and order:
-```
 
+```sh
 # This is the sample config but doesn't matter
-
 # because you can pay with cash instead of a credit card
-
 kubectl apply -f https://raw.githubusercontent.com/grantgumina/provider-pizza/master/examples/provider/pizza-config.yaml
 
 echo 'apiVersion: order.provider-pizza.crossplane.io/v1alpha1
@@ -67,23 +64,19 @@ providerConfigRef:
 name: example' > order.yaml
 
 kubectl apply -f order.yaml
+```
 
-````
 Now you should be able to see an order in Kubernetes
+
 ```sh
 kubectl get orders
 NAME ORDER STATUS PLACED PRICE
 my-order Makeline true 19.38
-
-````
+```
 
 The order status will update as the order is updated from the dominos API.
 
-````
-
+```sh
 NAME ORDER STATUS PLACED PRICE
 my-order Oven true 19.38
-
-```sh
-
-````
+```
